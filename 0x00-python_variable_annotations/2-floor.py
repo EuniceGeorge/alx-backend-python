@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-
-import math
 """function floor which takes a float n as argument
 and returns the floor of the float
 """
@@ -8,4 +6,7 @@ and returns the floor of the float
 
 def floor(n: float) -> int:
     """floor"""
-    return math.floor(n)
+    if n >= 0:
+        return int(n)
+    else:
+        return int(n) - 1 if n != int(n) else int(n)
