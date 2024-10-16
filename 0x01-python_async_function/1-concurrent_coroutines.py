@@ -11,7 +11,7 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     task = [wait_random(max_delay) for _ in range(n)]
     result = await asyncio.gather(*task)
     """
-    asyncio.gather accept multiple individual awaitable objects 
+    asyncio.gather accept multiple individual awaitable objects
     as separate arguments
     *task unpacks the list so that each task
     is passed as a separate argument
