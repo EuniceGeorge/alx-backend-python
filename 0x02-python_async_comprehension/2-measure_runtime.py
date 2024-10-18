@@ -3,12 +3,16 @@
 
 import asyncio
 import time
+from typing import List
 
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
-    """measure_time"""
+    """Execute async_comprehension four times in parallel and
+    measure total runtime.
+    Returns:
+        float: Total time taken for all four executions to complete"""
     start_time = time.time()
     await asyncio.gather(
             async_comprehension(),
