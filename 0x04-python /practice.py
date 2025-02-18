@@ -51,38 +51,36 @@
 #     print("You are not allowed")
 # input("press any key to exit:\n ")
 ##############################################################
-# Guess My Number
-#
-# The computer picks a random number between 1 and 100
-# The player tries to guess it and the computer lets
-# the player know if the guess is too high, too low and how many guesses
-# or right on the money
+# for i in range(0, 50, 2):
+#     print("Hi", end=" ")
+#####################################################################
 
-import random
+word = "pizza"
+print(word[0:5])
+print(word[-4:-1])
+print(word[-5:5])
+# start = None
+# while start != "":
+#     start = (input("\nStart: "))
+#     if start:
+#         start = int(start)
+#         finish = int(input("Finish: "))
+#         print("word[", start, ":", finish, "] is", end=" ")
+#         print(word[start:finish])
+# input("\n\nPress the enter key to exit.")
 
-num = random.randint(1, 100)
+#counting game
 
-count = 0
-max_guess = 4
-trial = 0
+# start = int(input("Enter the starting value: "))
+# end  = int(input("Enter the end value: "))
+# count = int(input("Enter the count: "))
 
-while trial != max_guess:
-    trial = int(input("Take a guess: "))
-    count += 1
+# for i in range(start, end, count):
+#     print(i,end=" ")
+#####################################################################
 
-    if trial < num:
-        print("lower")
-    elif trial > num:
-        print("higher")
-    else:
-        print("good job!!!")
+#print in reverse
+message = input("enter a message: ")
 
-    if count == max_guess:
-        print("your limit is exceeded")
-        break
-
-print("the number is: ", num)
-print("the number of trial is: ", count)
-    
-
-
+backwards_message = message[::-1]
+print("Your message backwards:", backwards_message)
