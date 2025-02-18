@@ -62,13 +62,13 @@ import random
 
 num = random.randint(1, 100)
 
-guess_comp = 1
+count = 0
 max_guess = 4
 trial = 0
 
-while trial >= max_guess:
-    trial = int(input("Take a guess"))
-    guess_comp += 1
+while trial != max_guess:
+    trial = int(input("Take a guess: "))
+    count += 1
 
     if trial < num:
         print("lower")
@@ -76,13 +76,13 @@ while trial >= max_guess:
         print("higher")
     else:
         print("good job!!!")
+
+    if count == max_guess:
+        print("your limit is exceeded")
         break
 
-if (guess_comp >= max_guess):
-    print("your limit is exceeded")
-
 print("the number is: ", num)
-print("the number of trial is: ", guess_comp)
+print("the number of trial is: ", count)
     
 
 
