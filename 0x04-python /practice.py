@@ -55,10 +55,14 @@
 #     print("Hi", end=" ")
 #####################################################################
 
-word = "pizza"
-print(word[0:5])
-print(word[-4:-1])
-print(word[-5:5])
+# word = "pizza"
+# print(word[0:5])
+# print(word[-4:-1])
+# print(word[-5:5])
+# print(len(word[::]))
+# tem = (word[0:len(word)])
+# for i in tem:
+#     print(i)
 # start = None
 # while start != "":
 #     start = (input("\nStart: "))
@@ -80,7 +84,67 @@ print(word[-5:5])
 #####################################################################
 
 #print in reverse
-message = input("enter a message: ")
+# message = input("enter a message: ")
 
-backwards_message = message[::-1]
-print("Your message backwards:", backwards_message)
+# backwards_message = message[::-1]
+# print("Your message backwards:", backwards_message)
+
+############################################################################
+# Create a game where the computer picks a random word and the player has to guess that word. 
+# The computer tells the player how many letters are in the word. 
+# Then the player gets five chances to ask if a letter is in the word. 
+# The computer can only respond with “yes” or “no”. 
+# Then, the player must guess the word.
+
+# import random
+# sequence=(list of words)
+# comp_guess= random guess from computer
+# trial = player guess word(input the guess word from sequence)
+# get length of word(len(comp_guess))
+# print the number of letters from the word randomly selected(len([::]))
+# initialize count=0
+
+# while trial != 5:
+# input a letter from a-Z
+# ask=word([0:len(word)])
+# for i in ask:
+# if input == i
+# print yes
+# else print no
+# count ++
+
+# trial=player guess the word
+
+import random
+word = ("shoe", "bag", "chair", "fan")
+comp_guess = random.choice(word)
+chances = 5
+guess = ""
+
+comp_guess_len = len(comp_guess)
+print("The word has ", comp_guess_len,  " letters.", end=" \n")
+
+while chances > 0:
+    print("you have ", chances, " chances left")
+    check = input("what letter will you love to check: ")
+    
+    if check in guess:
+        print("Already checked that letter")
+        continue
+
+    guess += check
+    chances = chances - 1
+
+    if check in comp_guess:
+        print("yes")
+    else:
+        print("no")
+
+print("Now guess, what's the word? ", end=" \n")
+player_guess = input("enter you guess: ")
+
+if player_guess == comp_guess:
+    print("congratulation!!!")
+else:
+    print("sorry, the word was", comp_guess)
+
