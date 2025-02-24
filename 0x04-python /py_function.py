@@ -32,36 +32,44 @@
 # so that the program’s code is in a function called main(). Don’t forget to call main() 
 # so that you can play the game.
 
-def guess_number(num):
-    """Ask for a number within a range."""
-    guess_comp = 1
-    trial = int(input("take a guess: \n"))
+def main(comp_guess):
+    chances = 5
+    guess = ""
 
-    while trial != num:
+    #Tell player the word length
+    comp_guess_len = len(comp_guess)
+    print("The word has ", comp_guess_len,  " letters.", end=" \n")
 
-        if trial < num:
-            print("Your guess is lower\n")
-        elif trial > num:
-            print("Your guess is higher\n")
+#Letter guessing phase
+    while chances > 0:
+        print("you have ", chances, " chances left")
+        check = input("what letter will you love to check: ")
+    
+        if check in guess:
+            print("Already checked that letter")
+            continue
+
+        guess += check
+        chances = chances - 1
+
+        if check in comp_guess:
+         print("yes")
         else:
-            print("Good job!!!\n")
+            print("no")
+    return guess
 
-        trial = int(input("guess the number: \n"))
-        guess_comp+=1
-
-    print("Yeah!!!!!!! you guessed right, the number is ", num ,end="")
-    print("\n")
-    print("your trial is: ", guess_comp)
-
-    return trial
-
-#main
 import random
 
-print("\tWelcome to 'Guess My Number'!")
-print("\nI'm thinking of a number between 1 and 100.")
-print("Try to guess it in as few attempts as possible.\n")
-num = random.randint(1, 100)
+# Initialize game
+word = ("shoe", "bag", "chair", "fan")
+comp_guess = random.choice(word)
 
-response = guess_number(num)
-print("\n")
+value = main(comp_guess)
+#Final guess phase
+print("Now guess, what's the word? ", end=" \n")
+player_guess = input("enter you guess: ")
+
+if player_guess == comp_guess:
+    print("congratulation!!!")
+else:
+    print("sorry, the word was", comp_guess)
