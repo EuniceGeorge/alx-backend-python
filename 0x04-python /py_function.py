@@ -32,44 +32,77 @@
 # so that the program’s code is in a function called main(). Don’t forget to call main() 
 # so that you can play the game.
 
-def main(comp_guess):
-    chances = 5
-    guess = ""
+# 1. Write a Python function to find the maximum of three numbers.
+# Click me to see the sample solution
 
-    #Tell player the word length
-    comp_guess_len = len(comp_guess)
-    print("The word has ", comp_guess_len,  " letters.", end=" \n")
+# def max_num(*num):
+#     return max(*num)
 
-#Letter guessing phase
-    while chances > 0:
-        print("you have ", chances, " chances left")
-        check = input("what letter will you love to check: ")
-    
-        if check in guess:
-            print("Already checked that letter")
-            continue
+# num = []
+# for i in range(3):
+#     number = input("enter number: ")
+#     num.append(number)
 
-        guess += check
-        chances = chances - 1
+# maxi= max_num(num)
+# print(maxi)
 
-        if check in comp_guess:
-         print("yes")
-        else:
-            print("no")
-    return guess
 
-import random
 
-# Initialize game
-word = ("shoe", "bag", "chair", "fan")
-comp_guess = random.choice(word)
+# 2. Write a Python function to sum all the numbers in a list.
+# Sample List (8, 2, 3, 0, 7)
+# Expected Output : 20
+# Click me to see the sample solution
 
-value = main(comp_guess)
-#Final guess phase
-print("Now guess, what's the word? ", end=" \n")
-player_guess = input("enter you guess: ")
+def num_sum(*num):
+     return sum(*num)
 
-if player_guess == comp_guess:
-    print("congratulation!!!")
-else:
-    print("sorry, the word was", comp_guess)
+num = []
+maxi=int(input("enter maximum number: "))
+for i in range(maxi):
+    number =int(input("enter number: "))
+    num.append(number)
+
+values = num_sum(num)
+print(values)
+
+
+# 3. Write a Python function to multiply all the numbers in a list.
+# Sample List : (8, 2, 3, -1, 7)
+# Expected Output : -336
+# Click me to see the sample solution
+
+
+
+# 4. Write a Python program to reverse a string.
+# Sample String : "1234abcd"
+# Expected Output : "dcba4321"
+# Click me to see the sample solution
+
+# 5. Write a Python function to calculate the factorial of a number (a non-negative integer). The function accepts the number as an argument.
+# Click me to see the sample solution
+
+# 6. Write a Python function to check whether a number falls within a given range.
+# Click me to see the sample solution
+
+# 7. Write a Python function that accepts a string and counts the number of upper and lower case letters.
+# Sample String : 'The quick Brow Fox'
+# Expected Output :
+# No. of Upper case characters : 3
+# No. of Lower case Characters : 12
+# Click me to see the sample solution
+
+# 8. Write a Python function that takes a list and returns a new list with distinct elements from the first list.
+# Sample List : [1,2,3,3,3,3,4,5]
+# Unique List : [1, 2, 3, 4, 5]
+# Click me to see the sample solution
+
+# 9. Write a Python function that takes a number as a parameter and checks whether the number is prime or not.
+# Note : A prime number (or a prime) is a natural number greater than 1 and that has no positive divisors other than 1 and itself.
+# Click me to see the sample solution
+
+# 10. Write a Python program to print the even numbers from a given list.
+# Sample List : [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# Expected Result : [2, 4, 6, 8]
+
+# 16. Write a Python function to create and print a list where the values are the squares of numbers between 1 and 30 (both included).
+# Click me to see the sample solution
