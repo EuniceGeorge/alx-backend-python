@@ -53,30 +53,57 @@
 # Expected Output : 20
 # Click me to see the sample solution
 
-def num_sum(*num):
-     return sum(*num)
+# def num_sum(*num):
+#      return sum(*num)
 
-num = []
-maxi=int(input("enter maximum number: "))
-for i in range(maxi):
-    number =int(input("enter number: "))
-    num.append(number)
+# num = []
+# maxi=int(input("enter maximum number: "))
+# for i in range(maxi):
+#     number =int(input("enter number: "))
+#     num.append(number)
 
-values = num_sum(num)
-print(values)
+# values = num_sum(num)
+# print(values)
 
 
 # 3. Write a Python function to multiply all the numbers in a list.
 # Sample List : (8, 2, 3, -1, 7)
 # Expected Output : -336
 # Click me to see the sample solution
+# num = []
+# mul = 1
+# maxi = int(input("enter maximum number: "))
+# for i in range(maxi):
+#     num = int(input("enter number: "))
+#     mul *= num
+# print (mul)
 
 
+# def multiply (num):
+#     mul = 1
+#     mul *= num
+#     return mul
+
+# num = []
+# value = 1
+# maxi = int(input("enter maximum number: "))
+# for i in range(maxi):
+#     num = int(input("enter number: "))
+#     if num == 0:
+#         print("Zero not allowed")
+#         break
+#     else:
+#         value *= multiply(num)
+# print(value)
 
 # 4. Write a Python program to reverse a string.
 # Sample String : "1234abcd"
 # Expected Output : "dcba4321"
 # Click me to see the sample solution
+
+print("A program to print a string in reverse")
+word = ("1234abcd")
+print(word[::-1])
 
 # 5. Write a Python function to calculate the factorial of a number (a non-negative integer). The function accepts the number as an argument.
 # Click me to see the sample solution
