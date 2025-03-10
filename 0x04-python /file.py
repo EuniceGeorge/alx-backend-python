@@ -17,11 +17,11 @@
 #     print(line)
 # text_file.close()
 #########################################################################
-print("Reading a text file with the read() method.")
-text_file = open("write_it.txt", "r")
-for line in text_file:
-    print(line)
-text_file.close()
+# print("Reading a text file with the read() method.")
+# text_file = open("write_it.txt", "r")
+# for line in text_file:
+#     print(line)
+# text_file.close()
 
 #####################################################################################################
 # so by default, if a mode is not created, it redas a file

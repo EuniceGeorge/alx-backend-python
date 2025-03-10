@@ -101,12 +101,14 @@
 # Expected Output : "dcba4321"
 # Click me to see the sample solution
 
-print("A program to print a string in reverse")
-word = ("1234abcd")
-print(word[::-1])
+# print("A program to print a string in reverse")
+# word = ("1234abcd")
+# print(word[::-1])
 
-# 5. Write a Python function to calculate the factorial of a number (a non-negative integer). The function accepts the number as an argument.
+# 5. Write a Python function to calculate the factorial of a number (a non-negative integer). 
+# The function accepts the number as an argument.
 # Click me to see the sample solution
+
 
 # 6. Write a Python function to check whether a number falls within a given range.
 # Click me to see the sample solution
